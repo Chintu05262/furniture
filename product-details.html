@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sweiper.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <div class="myNav">
+        <div class="container-fluid">
+            <div class="myNav_content active">
+                <div class="mob-icon">
+                    <div class="menu_icon">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                    <div class="search-icon">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <div class="search-btn">
+                        <button>
+                            <i class='bx bx-search'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="search--input">
+                    <div class="search--input-box">
+                        <input type="text" placeholder="Search here...">
+                        <button><i class='bx bx-search'></i></button>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <svg data-style="pb-logo" width="407" height="29" viewBox="0 0 337.1 23.3" role="img"
+                            aria-labelledby="title" data-component="Global-brand_logo-PBLogo" id="logo-pb">
+                            <title id="title">Pottery Barn</title>
+                            <path
+                                d="M5,12.1v10.6h1v0.5H0v-0.5h1V0.5H0V0h7.1c0.5,0,2.3-0.1,3.3,0.5c1.1,0.7,1.4,1.7,1.4,2.8v5.5c0,0.6-0.1,1.6-1.2,2.4c-1,0.7-2.8,0.8-4.2,0.8H5z M7.8,2.1c0-0.4,0-0.8-0.2-1.1C7.2,0.6,6.8,0.5,6.2,0.5H5v11.1h1.5c0.5,0,0.8-0.2,1.1-0.4c0.3-0.3,0.2-0.9,0.2-1.2V2.1z"
+                                class="st0"></path>
+                            <path
+                                d="M42.1,19.8c0,2.1-1.4,3.5-5.1,3.4c-4,0-5-1.3-5-3.4V5.7c0-2.5,1.8-3.8,5.2-3.8c3.3,0,5,1.6,5,3.8V19.8zM38.5,3.9c0-1.2-0.4-1.6-1.3-1.6c-1,0-1.5,0.4-1.5,1.6v17.3c0,0.9,0.3,1.6,1.4,1.6c1.1,0,1.5-0.4,1.5-1.6V3.9z"
+                                class="st0"></path>
+                            <path d="M74.4,2.3v4.2h-0.5V3.3h-3.1v19.5h0.9v0.5h-5.4v-0.5h0.9V3.3h-3.1v3.3h-0.5V2.3H74.4z"
+                                class="st0"></path>
+                            <path
+                                d="M106.7,2.3v4.2h-0.5V3.3h-3.1v19.5h0.9v0.5h-5.4v-0.5h0.9V3.3h-3.1v3.3h-0.5V2.3H106.7z"
+                                class="st0"></path>
+                            <path
+                                d="M132.5,12.1h4v-1.8h0.5v4.6h-0.5v-1.8h-4v9.3h4v-3.2h0.5v4.1H128v-0.5h0.9v-20H128V2.3h9.1v4.1h-0.5V3.3h-4V12.1z"
+                                class="st0"></path>
+                            <path
+                                d="M166.5,12.5c0,0.1,1.3,0.2,2.3,0.9c0.9,0.6,1,1.3,1,2.2v7.1h0.9v0.5h-4.5v-8.4c0-0.7,0.2-1.3-0.5-1.7c-0.4-0.3-1.1-0.2-1.6-0.2h-1.2v9.8h0.9v0.5h-5.4v-0.5h0.9v-20h-0.9V2.3h6.4c0.4,0,2.1-0.1,3,0.5c1,0.6,1.3,1.5,1.3,2.6v4.5c0,0.2,0.1,1.2-0.7,1.9C167.5,12.4,166.5,12.5,166.5,12.5z M165.4,4.2c0-0.4,0.1-0.7-0.2-1c-0.3-0.3-0.8-0.4-1.1-0.4h-1.1v9.8h1.3c0.4,0,0.7-0.1,1-0.4c0.3-0.3,0.2-0.8,0.2-1.1V4.2z"
+                                class="st0"></path>
+                            <path
+                                d="M194,15.8l-3.8-13h-0.9V2.3h5.4v0.5h-0.9l3.2,11l2.8-11H199V2.3h3v0.5h-0.9l-3.4,13v7h0.9v0.5h-5.4v-0.5h0.9V15.8z"
+                                class="st0"></path>
+                            <path
+                                d="M235.9,14.6v5.2c0,0.9,0,1.5-0.7,2.3c-0.9,1-2.7,1.1-3.5,1.1H223v-0.5h1V0.5h-1V0h8.4c1,0,1.8,0.2,2.6,0.8c1.3,1,1.2,2.2,1.2,2.2v5.6c0,0,0,1.1-0.8,1.8c-1.1,0.9-1.9,0.9-1.9,1c0,0.2,1.5,0.1,2.6,1.1C235.6,13,235.9,13.6,235.9,14.6zM228,22.7h2.2c0.1,0,0.8,0,1.2-0.3c0.4-0.3,0.5-0.7,0.5-1.1v-8.2c0-0.3,0-0.6-0.2-0.9c-0.2-0.3-0.7-0.4-1.1-0.4H228V22.7zM228,0.5v10.7h2.1c0.1,0,0.5,0,0.8-0.3c0.2-0.3,0.2-0.6,0.2-0.9V1.9c0-0.1,0.1-0.9-0.2-1.1c-0.2-0.3-1.1-0.3-1.2-0.3H228z"
+                                class="st0"></path>
+                            <path
+                                d="M262.9,2.8H262V2.3h5.6v0.5h-1l3.6,20h0.9v0.5h-5.5v-0.5h0.8l-0.9-5.8H261l-1.2,5.8h0.9v0.5h-2.8v-0.5h0.8L262.9,2.8z M261.2,16.1h4.1l-1.9-11.4L261.2,16.1z"
+                                class="st0"></path>
+                            <path
+                                d="M300.5,12.5c0,0.1,1.3,0.2,2.3,0.9c0.9,0.6,1,1.3,1,2.2v7.1h0.9v0.5h-4.5v-8.4c0-0.7,0.2-1.3-0.5-1.7c-0.4-0.3-1.1-0.2-1.6-0.2h-1.2v9.8h0.9v0.5h-5.4v-0.5h0.9v-20h-0.9V2.3h6.4c0.4,0,2.1-0.1,3,0.5c1,0.6,1.3,1.5,1.3,2.6v4.5c0,0.2,0.1,1.2-0.7,1.9C301.5,12.4,300.5,12.5,300.5,12.5z M299.3,4.2c0-0.4,0.1-0.7-0.2-1c-0.3-0.3-0.8-0.4-1.1-0.4h-1.1v9.8h1.3c0.4,0,0.7-0.1,1-0.4c0.3-0.3,0.2-0.8,0.2-1.1V4.2z"
+                                class="st0"></path>
+                            <path
+                                d="M332.4,23.3l-4.4-17.4v16.9h0.9v0.5H326v-0.5h0.9v-20H326V2.3h4.5l4.6,18.1V2.8h-0.9V2.3h2.8v0.5h-0.9v20.5H332.4z"
+                                class="st0"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="login.html"><i class='bx bx-user-circle'></i>account</a></li>
+                        <li><a href="#"><img src="assets/images/cart.svg" class="img-fluid" alt="cart"> track order</a>
+                        </li>
+                        <li><a href="#"><img src="assets/images/recents.png" class="img-fluid" alt="recents">recents</a>
+                        </li>
+                        <li class="cart-no"><a href="whishlist.html"><img src="assets/images/favorites.png"
+                                    class="img-fluid" alt="recents">favorites</a>
+                            <span>(6)</span>
+                        </li>
+                        <li class="cart-no"><a href="cart.html"><img src="assets/images/cartnew.png" class="img-fluid"
+                                    alt="cart">cart
+                            </a>
+                            <span>(2)</span>
+                        </li>
+                    </ul>
+                    <div class="menu_mob">
+                        <div class="user">
+                            <a href="login.html"><i class='bx bx-user-circle'></i>
+                            </a>
+                        </div>
+                        <div class="cart">
+                            <a href="cart.html">
+                                <i class='bx bx-cart'></i>
+                                <span>(2)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="bottom-menu">
+            <ul>
+                <li class="dropmenu">
+                    <a href="#">Furniture</a>
+                    <div class="dropmenu_list">
+                        <a href="#">shop all furniture</a>
+                        <a href="#">new & featured</a>
+                        <a href="#">living room furniture</a>
+                        <a href="#">bedroom furniture</a>
+                        <a href="#">dining & kitchen furniture</a>
+                        <a href="#">storage and modaltas furniture</a>
+                        <a href="#">best selling furniture</a>
+                    </div>
+                </li>
+                <li class="dropmenu"><a href="#">lighting</a>
+                    <div class="dropmenu_list">
+                        <a href="#">shop all lighting</a>
+                        <a href="#">new lighting</a>
+                        <a href="#">table & hoorlamp</a>
+                        <a href="#">bedroom furniture</a>
+                        <a href="#">dining & kitchen furniture</a>
+                        <a href="#">storage and modaltas furniture</a>
+                        <a href="#">best selling furniture</a>
+                    </div>
+                </li>
+                <li class="dropmenu"><a href="#">delos & mirrors</a>
+                    <div class="dropmenu_list">
+                        <a href="#">shop all lighting</a>
+                        <a href="#">new lighting</a>
+                        <a href="#">table & hoorlamp</a>
+                        <a href="#">bedroom furniture</a>
+                        <a href="#">dining & kitchen furniture</a>
+                        <a href="#">storage and modaltas furniture</a>
+                        <a href="#">best selling furniture</a>
+                    </div>
+                </li>
+                <li class="dropmenu"><a href="#">tabletop & kitchen</a>
+                    <div class="dropmenu_list">
+                        <a href="#">shop all lighting</a>
+                        <a href="#">new lighting</a>
+                        <a href="#">table & hoorlamp</a>
+                        <a href="#">bedroom furniture</a>
+                        <a href="#">dining & kitchen furniture</a>
+                        <a href="#">storage and modaltas furniture</a>
+                        <a href="#">best selling furniture</a>
+                    </div>
+                </li>
+                <li class="dropmenu"><a href="#">Home utility & essentials</a>
+                    <div class="dropmenu_list">
+                        <a href="#">shop all lighting</a>
+                        <a href="#">new lighting</a>
+                        <a href="#">table & hoorlamp</a>
+                        <a href="#">bedroom furniture</a>
+                        <a href="#">dining & kitchen furniture</a>
+                        <a href="#">storage and modaltas furniture</a>
+                        <a href="#">best selling furniture</a>
+                    </div>
+                </li>
+                <li class="dropmenu"><a href="#">gifts</a>
+                    <div class="dropmenu_list">
+                        <a href="#">shop all lighting</a>
+                        <a href="#">new lighting</a>
+                        <a href="#">table & hoorlamp</a>
+                        <a href="#">bedroom furniture</a>
+                        <a href="#">dining & kitchen furniture</a>
+                        <a href="#">storage and modaltas furniture</a>
+                        <a href="#">best selling furniture</a>
+                    </div>
+                </li>
+                <li class="dropmenu"><a href="#">sale</a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="offer">
+            <div class="container">
+                <div class="offer_info">
+                    <p>Free Shipping on 1000s of Items <a href="#">shop now ›</a></p>
+                    <p>The Halloween Shop <a href="#"> Selling Scary Fast ›</a></p>
+                    <p>In-Stock Furniture <a href="#"> Delivered in 1-5 Weeks ›</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile nav -->
+        <div class="mobile_nav">
+            <div class="mobile_nav__content">
+                <div class="mobile_header">
+                    <div class="close-icon">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </div>
+                <div class="mobile_menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <li class="dropBtn"><a href="#">furniture <i class='bx bx-chevron-right'></i></a>
+                            <div class="megaDrop">
+                                <a href="#">shop all furniture</a>
+                                <a href="#">new & featured</a>
+                                <a href="#">living room furniture</a>
+                                <a href="#">bedroom furniture</a>
+                                <a href="#">dining & kitchen furniture</a>
+                                <a href="#">storage and modaltas furniture</a>
+                                <a href="#">best selling furniture</a>
+                            </div>
+                        </li>
+                        <li class="dropBtn"><a href="#">lighting <i class='bx bx-chevron-right'></i></a>
+                            <div class="megaDrop">
+                                <a href="#">shop all furniture</a>
+                                <a href="#">new & featured</a>
+                                <a href="#">living room furniture</a>
+                                <a href="#">bedroom furniture</a>
+                                <a href="#">dining & kitchen furniture</a>
+                                <a href="#">storage and modaltas furniture</a>
+                                <a href="#">best selling furniture</a>
+                            </div>
+                        </li>
+                        <li class="dropBtn"><a href="#">delos & mirrors <i class='bx bx-chevron-right'></i></a>
+                            <div class="megaDrop">
+                                <a href="#">shop all furniture</a>
+                                <a href="#">new & featured</a>
+                                <a href="#">living room furniture</a>
+                                <a href="#">bedroom furniture</a>
+                                <a href="#">dining & kitchen furniture</a>
+                                <a href="#">storage and modaltas furniture</a>
+                                <a href="#">best selling furniture</a>
+                            </div>
+                        </li>
+                        <li class="dropBtn"><a href="#">tabletop & kitchen <i class='bx bx-chevron-right'></i></a>
+                            <div class="megaDrop">
+                                <a href="#">shop all furniture</a>
+                                <a href="#">new & featured</a>
+                                <a href="#">living room furniture</a>
+                                <a href="#">bedroom furniture</a>
+                                <a href="#">dining & kitchen furniture</a>
+                                <a href="#">storage and modaltas furniture</a>
+                                <a href="#">best selling furniture</a>
+                            </div>
+                        </li>
+                        <li class="dropBtn"><a href="#">Home utility & essentials <i
+                                    class='bx bx-chevron-right'></i></a></li>
+                        <li class="dropBtn"><a href="#">sale</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- product section -->
+    <section class="purchasing_wrapper global_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="purchasing_wrapper__left">
+                        <div class="purchasing_img">
+                            <div class="purchasing_small__img">
+
+                                <div class="vertical_img">
+                                    <img src="assets/images/img1m.jpg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+                                <div class="vertical_img">
+                                    <img src="assets/images/img2.jpeg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+                                <div class="vertical_img">
+                                    <img src="assets/images/img2m.jpg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+                                <div class="vertical_img">
+                                    <img src="assets/images/img3.jpeg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+                                <div class="vertical_img">
+                                    <img src="assets/images/img3m.jpg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+                                <div class="vertical_img">
+                                    <img src="assets/images/img4.jpeg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+                                <div class="vertical_img">
+                                    <img src="assets/images/img5.jpeg" class="img-fluid" alt="img1"
+                                        onclick="myFunction(this)">
+                                </div>
+
+                            </div>
+                            <div class="purchasing_big__img">
+                                <img src="assets/images/img2.jpeg" class="img-fluid example-1 image" alt="big_img"
+                                    id="imgBox" onclick="myFunction(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="purchasing_wrapper__content">
+                        <h3>Wesley Reversible Quilt</h3>
+                        <p>$69.50 - $329</p>
+                        <div class="purchase_type">
+                            <div class="purchase_type__select">
+                                <h6>size:</h6>
+                                <div class="purchase--input">
+
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>Queen</label>
+                                    </div>
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>king</label>
+                                    </div>
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>california king</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="purchase_type__select">
+                                <h6>colour:</h6>
+                                <div class="purchase--input">
+
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>white</label>
+                                    </div>
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>black</label>
+                                    </div>
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>charcoal</label>
+                                    </div>
+                                    <div class="purchase_type__input">
+                                        <input type="checkbox">
+                                        <label>Yellow</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="purchase_type__select">
+                                <h6>quantity:</h6>
+                                <div class="purchase--input">
+                                    <div class="purchase-quantity">
+                                        <p>-</p>
+                                        <input type="text" value="0">
+                                        <p>+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-now">
+                            <a href="#"><i class='bx bxs-shopping-bag'></i> add to cart</a>
+                            <button><i class='bx bxs-cart-alt'></i>buy now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="global_section elements_wrapper">
+        <div class="container-fluid">
+            <div class="elements_wrapper__content">
+
+                <div class="main_heading">
+                    <h3>Also In This Collection</h3>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper mySwiper element_content">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="assets/images/img1.avif" class="img-fluid" alt="img1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="assets/images/img1.avif" class="img-fluid" alt="img1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="assets/images/img1.avif" class="img-fluid" alt="img1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="assets/images/img1.avif" class="img-fluid" alt="img1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="assets/images/img1.avif" class="img-fluid" alt="img1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="assets/images/img1.avif" class="img-fluid" alt="img1">
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-scrollbar"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-sm-4">
+                        <div class="footer_wrapper__box">
+                            <h6>Customer Service</h6>
+                            <div class="footer_links">
+                                <a href="#">Contact Us</a>
+                                <a href="#">Track Your Order</a>
+                                <a href="#"> Returns & Exchanges</a>
+                                <a href="#">Shipping Information</a>
+                                <a href="#">International Orders</a>
+                                <a href="#">Email Preferences</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4">
+                        <div class="footer_wrapper__box">
+                            <h6>About Us</h6>
+                            <div class="footer_links">
+                                <a href="#">Our Story</a>
+                                <a href="#">Careers</a>
+                                <a href="#"> Press</a>
+                                <a href="#">Influencers</a>
+                                <a href="#">Find a Store</a>
+                                <h6>Business to Business</h6>
+                                <a href="#">Overview</a>
+                                <a href="#">Trade</a>
+                                <a href="#">Contact</a>
+                                <a href="#">Corporate Gifting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-4">
+                        <div class="footer_wrapper__box">
+                            <h6>Design Services</h6>
+                            <div class="footer_links">
+                                <a href="#">Free Interior Design</a>
+                                <a href="#">Room Planner</a>
+                                <h6>Resources</h6>
+                                <a href="#"> Pottery Barn Credit Card</a>
+                                <a href="#"> Pay Bill Online</a>
+                                <a href="#"> View Online CatalogOrders</a>
+                                <a href="#">Request a Catalog</a>
+                                <a href="#">Address Change</a>
+                                <a href="#">Gift Cards</a>
+                                <a href="#"> Do Not Sell Or Share My Personal Information</a>
+                                <h6>Shopping App</h6>
+                                <a href="#">"Everything you love about shopping with us, all in one convenient
+                                    place."</a>
+                                <img src="assets/images/AppStoreDownload.svg" class="img-fluid" alt="app-store">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <div class="footer_wrapper__box footer_email">
+                            <h6>Join our VIP list for inspiration, new arrivals & more.</h6>
+                            <div class="footer_input">
+                                <input type="email" placeholder="ENTER YOUR EMAIL">
+                                <button>Sign up</button>
+                            </div>
+                            <span>California residents, please see the Financial Incentive Terms for terms. </span>
+                            <div class="follow">
+                                <h6>follow us</h6>
+                                <div class="follow_links">
+                                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2024 Williams-Sonoma, Inc. All Rights Reserved |
+                    <a href="#"> Terms & Conditions |</a>
+                    <a href="#"> Accessibility |</a>
+                    <a href="#"> Privacy Policy |</a>
+                    <a href="#"> Legal Statement </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="assets/js/index.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/filter.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            // centeredSlides: true,
+            spaceBetween: 20, // Add space between slides
+            slidesPerGroupSkip: 0,
+            grabCursor: true,
+            keyboard: {
+                enabled: true,
+            },
+            breakpoints: {
+                769: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 2,
+                },
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
